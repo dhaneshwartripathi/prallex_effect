@@ -1,31 +1,84 @@
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    margin:0;
-    padding:0;
+}
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px; 
 }
 .container{
-    height: 400px;
-    border: 2px solid black;
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    /* flex-flow:column wrap; */
-    /* justify-content: center; */
-    /* justify-content: start; */
-    /* justify-content: end; */
-    /* justify-content: baseline; */
-    /* align-items: center; */
-    /* align-content: flex-end; */
-    justify-content:space-evenly;
-    
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index:-1;  
+}
+.background{
+    transform: translateZ(-40px)scale(5);
+}
+.foreground{
+    transform: translateZ(-20px)scale(3);
 
 }
-#box{
-    /* height: 100px;
-    width: 100px; */
-    border: 2px solid black;
-    /* flex-grow: 1; */
-    /* flex-basis: 50%; */
-    background-image: linear-gradient(to right, rgb(245, 180, 180) ,rgb(171, 171, 242),rgb(237, 237, 138));
+.foreground,.background{ 
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index:-1 ;
+    object-fit:cover;
+}
+h1{
+    position: absolute;
+    top: 10rem;
+    font-size: 10rem;
+    color: aliceblue;
+    text-shadow:0 0 10px rgb(67, 66, 66);
+}
+.headsec{
+    font-size: 3rem;
+    padding: 0 6rem;
+}
+.text{
+    font-size: 2rem;
+    padding: 0 6rem;
+    margin: 5rem 0;
+}
+section{
+    background-color:rgb(45,45,45);
+    color: white;
+    padding: 5rem 0;
+}
+.bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; 
+    height: 500px;
+}
+.desc{
+    position:absolute;
+    justify-content: center;
+    font-size: 3rem ;
+    /* color: black; */
+    top: 45%;
+    left: 45%;
+    /* background-color: white; */
+    text-shadow:0 0 10px rgb(67, 66, 66);
+}
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+.bg3{
+    background-image: url(sport-3.jpg);
 }
 
- 
+
